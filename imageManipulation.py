@@ -1,3 +1,10 @@
+# SECV3213-02 FUNDAMENTAL OF IMAGE PROCESSING #
+#                 ASSIGNMENT 1                #
+# ------------------GROUP 9------------------ #
+# 1. Gan Qi You    A21EC0178                  #
+# 2. Lai Kai Chian A21EC0041                  #
+# 3. Wai Jia Wen   A21EC0139                  #
+
 import cv2 as cv
 import numpy as np
 from tkinter import *
