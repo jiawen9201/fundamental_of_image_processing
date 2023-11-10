@@ -119,8 +119,10 @@ class ImageManipulation(Tk):
         self.rectangle = 255*np.ones((x,y,z), dtype="uint8") # create white blank image of the same size
         self.rois = cv.selectROIs("Select ROIs", self.img) # select multiple ROIs
         for roi in self.rois:
+            # make the roi region becomes black
             self.rectangle[int(roi[1]):int(roi[1]+roi[3]), int(roi[0]):int(roi[0]+roi[2])] = 0
-            self.temp_img = cv.bitwise_and(self.rectangle, self.img) # perform bitwise AND on the image
+            # perform bitwise AND on the image
+            self.temp_img = cv.bitwise_and(self.rectangle, self.img)
         self.img = self.temp_img
         cv.destroyAllWindows()
         cv.imshow('Image', self.img)
@@ -131,6 +133,7 @@ class ImageManipulation(Tk):
         (x,y,z) = self.img.shape # get the dimension of image
         self.rois = cv.selectROIs("Select ROIs", self.img) # select multiple ROIs
         # calculate the darkness scale
+        # to make image darker the scale should be <1, use 100 to subtract the percentage because greater percentage of darkness is resulted from smaller decimal value of scale
         darkness = (100-self.darken_brighten_percentage.get())/100
         # perform division on the selected ROIs based on chosen scale
         for roi in self.rois:
@@ -144,7 +147,8 @@ class ImageManipulation(Tk):
         (x,y,z) = self.img.shape # get the dimension of image
         self.rois = cv.selectROIs("Select ROIs", self.img) # select multiple ROIs
         # calculate the brightness scale
-        brightness = (self.darken_brighten_percentage.get()/100)+1.0 # add 1 because cannot scale cannot smaller than 1, <1 will make image darker (same like division)
+        # add 1 because cannot scale cannot smaller than 1, <1 will make image darker (like division)
+        brightness = (self.darken_brighten_percentage.get()/100)+1.0
         # perform multiplication on the selected ROIs based on chosen scale
         for roi in self.rois:
             self.img[int(roi[1]):int(roi[1]+roi[3]), int(roi[0]):int(roi[0]+roi[2])] = cv.multiply(self.img[int(roi[1]):int(roi[1]+roi[3]), int(roi[0]):int(roi[0]+roi[2])], (1,1,1,1), scale=brightness)
