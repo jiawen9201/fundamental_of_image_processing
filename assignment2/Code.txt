@@ -1,0 +1,16 @@
+./restoration1.py Noise/ImgA6.jpg Restored/ImgA6_restoration1.jpg
+./restoration1.py Noise/ImgB6.jpg Restored/ImgB6_restoration1.jpg
+./restoration1.py Noise/ImgC6.jpg Restored/ImgC6_restoration1.jpg
+
+./restoration2.py Noise/ImgA6.jpg Restored/ImgA6_restoration2.jpg
+./restoration2.py Noise/ImgB6.jpg Restored/ImgB6_restoration2.jpg
+./restoration2.py Noise/ImgC6.jpg Restored/ImgC6_restoration2.jpg
+
+./similarity.py Original/ImgA6.jpg Restored/ImgA6_restoration1.jpg
+./similarity.py Original/ImgA6.jpg Restored/ImgA6_restoration2.jpg
+
+./similarity.py Original/ImgB6.jpg Restored/ImgB6_restoration1.jpg
+./similarity.py Original/ImgB6.jpg Restored/ImgB6_restoration2.jpg
+
+./similarity.py Original/ImgC6.jpg Restored/ImgC6_restoration1.jpg
+./similarity.py Original/ImgC6.jpg Restored/ImgC6_restoration2.jpg
