@@ -8,7 +8,6 @@
 import sys
 import cv2 as cv
 import numpy as np
-import math
 
 # Default values
 BORDER_SIZE = 15
