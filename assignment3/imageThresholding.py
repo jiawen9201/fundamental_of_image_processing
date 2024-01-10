@@ -12,7 +12,6 @@ from tkinter import filedialog
 from tkinter import simpledialog as sd
 from tkinter import (Tk, ttk, Label, Frame, Button, Radiobutton, IntVar, HORIZONTAL)
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 
 # Default values
 BORDER_SIZE = 15
