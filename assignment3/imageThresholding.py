@@ -6,8 +6,6 @@
 # 3. Wai Jia Wen   A21EC0139                  #
 
 import cv2 as cv
-import numpy as np
-from tkinter import *
 from tkinter import filedialog
 from tkinter import simpledialog as sd
 from tkinter import (Tk, ttk, Label, Frame, Button, Radiobutton, IntVar, HORIZONTAL)
