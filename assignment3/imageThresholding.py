@@ -13,10 +13,6 @@ from tkinter import simpledialog as sd
 from tkinter import (Tk, ttk, Label, Frame, Button, Radiobutton, IntVar, HORIZONTAL)
 import matplotlib.pyplot as plt
 
-# Default values
-BORDER_SIZE = 15
-CAPTION_SIZE = 60
-
 class ImageThresholding(Tk):
 
     def __init__(self):
