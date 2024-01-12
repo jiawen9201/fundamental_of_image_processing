@@ -100,10 +100,10 @@ class ImageThresholding(Tk):
         blockSize = sd.askinteger("Change Block Size", "Enter the block size (odd number) [default: 45]", minvalue=3)
         if blockSize == None:
             blockSize = 45
-        if parameter1 == None:
-            parameter1 = 10
         while(blockSize%2==0):
             blockSize = sd.askinteger("Change Block Size", "Enter the block size (odd number) [default: 45]", minvalue=3)
+        if parameter1 == None:
+            parameter1 = 10
         parameter1 = sd.askinteger("Change Parameter", "Enter the parameter (min 0) [default: 10]", minvalue=0)
         self.adaptive()
 
