@@ -165,6 +165,7 @@ class ImageThresholding(Tk):
 
         cv.imwrite(filename, self.img)
         cv.destroyAllWindows()
+        plt.close()
     
     # reset image
     def reset(self):
