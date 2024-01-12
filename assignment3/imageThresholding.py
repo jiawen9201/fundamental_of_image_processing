@@ -169,7 +169,6 @@ class ImageThresholding(Tk):
     
     # reset image
     def reset(self):
-        self.img = self.raw_img.copy()
         cv.destroyAllWindows()
         plt.close()
 
